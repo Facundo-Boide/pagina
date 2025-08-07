@@ -57,6 +57,7 @@ footer p span{
     color: #c4c4c4;
     margin-bottom: 10px;
     display: block;
+    opacity: .5;
 }
 
 @media (max-width: 600px) {
