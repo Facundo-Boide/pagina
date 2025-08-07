@@ -1,0 +1,22 @@
+.reservas {
+    width: 100% ;
+    max-width: 1280px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.bloques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bloque {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
