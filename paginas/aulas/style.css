@@ -1,0 +1,62 @@
+main {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    }
+
+.contenedor {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    }
+
+.aula {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+.imagen-aula {
+    width: 150px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 5px;
+    flex-shrink: 0;
+    background-image: url(''); /* Podés poner la ruta de tu imagen acá */
+    background-size: cover;
+    background-position: center;
+    }
+
+.info-aula {
+    flex-grow: 1;
+    text-align: left;
+    }
+
+.info-aula h2 {
+    margin: 0 0 10px 0;
+    }
+
+.btn-reservar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+
+.btn-reservar:hover {
+    background-color: #0056b3;
+    }
