@@ -7,6 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url(page-bg-01.jpg);
 }
 
 nav {
@@ -52,14 +53,14 @@ nav {
 .slides img {
     width: 100%;
     height: 100%;
+    margin-left: 100px;
 }
 
-.slides .img2 {
+.img2 {
     align-items: center;
-    width: 4001px;
+    width: 400%;
+    margin-top: 100px;
 }
-
-
 
 @keyframes slide {
     0%   { transform: translateX(0%); }
@@ -134,13 +135,12 @@ h1 {
     margin: auto;
 
 }
-
-/* p {
+p {
     margin: auto;
     text-align: center;
     width: 80%;
     margin-top: 5em;
-} */
+} 
 
 .login-form button {
     padding: 5px 10px;
