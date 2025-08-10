@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -93,7 +95,6 @@ footer {
     font-weight: 500;
     transition: color 0.3s;
 }
-
 .nav-links a:hover {
     color: #18bc9c;
 }
@@ -133,7 +134,8 @@ img {
 h1 {
     text-align: center;
     margin: auto;
-
+    margin-bottom: 40px;
+    margin-top: 0;
 }
 p {
     margin: auto;
@@ -151,4 +153,19 @@ p {
     font-size: 0.9em;
     transition: background-color 0.3s;
 }
-
+.present {
+    width: 50%;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 20px;
+    padding-top: none;
+    box-shadow: 0px 0px 20px;
+    box-sizing: content-box;
+    
+}
+.intro {
+    text-align: center;
+    margin-left: 45px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+}
