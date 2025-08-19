@@ -1,62 +1,72 @@
 main {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Sobreescribe fondo global */
     margin: 0;
-    padding: 40px 0;
+    padding: 40px 20px; /* Márgenes coherentes */
     display: flex;
-    justify-content: center;
-    }
+    justify-content: flex-start; /* Alinea a la izquierda */
+    align-items: flex-start;
+    min-height: calc(100vh - 70px); /* Espacio para nav y footer */
+}
 
-.contenedor {
+main .aulas-container {
     width: 100%;
-    max-width: 700px;
+    max-width: 700px; /* Ancho máximo consistente */
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    }
+    flex-direction: column; /* Apila aulas verticalmente */
+    gap: 30px; /* Espacio entre aulas */
+    margin-left: 20px; /* Margen izquierdo coherente */
+}
 
-.aula {
+main .aulas-container .aula {
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Asegura que los elementos internos estén apilados */
+    align-items: flex-start; /* Alinea contenido a la izquierda */
+    gap: 10px; /* Espacio interno */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+}
 
-.imagen-aula {
+main .aulas-container .aula .imagen-aula {
     width: 150px;
     height: 100px;
     background-color: #ddd;
     border-radius: 5px;
     flex-shrink: 0;
-    background-image: url(''); /* Podés poner la ruta de tu imagen acá */
+    background-image: url(''); /* Ruta de imagen si se usa */
     background-size: cover;
     background-position: center;
-    }
+}
 
-.info-aula {
+main .aulas-container .aula .info-aula {
     flex-grow: 1;
     text-align: left;
-    }
+}
 
-.info-aula h2 {
+main .aulas-container .aula h2 {
     margin: 0 0 10px 0;
-    }
+    text-align: left; /* Sobreescribe centrado global */
+}
 
-.btn-reservar {
+main .aulas-container .aula p {
+    margin: 0; /* Neutraliza márgenes globales */
+    text-align: left; /* Sobreescribe centrado global */
+    width: auto; /* Neutraliza width global */
+}
+
+main .aulas-container .aula .btn-reservar {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
-    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    }
+}
 
-.btn-reservar:hover {
+main .aulas-container .aula .btn-reservar:hover {
     background-color: #0056b3;
-    }
+}
