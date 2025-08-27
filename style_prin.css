@@ -153,7 +153,19 @@ p {
     font-size: 0.9em;
     transition: background-color 0.3s;
 }
-.present {
+.error-message {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #e63946;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+  display: none;
+} /* Oculto al inicio */
+
+  .present {
     width: 60%;
     border: 1px solid black;
     margin: auto;
