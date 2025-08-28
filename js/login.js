@@ -18,6 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const user = data.users.find(u => u.username === username && u.password === password);
         
         if (user) {
+            localStorage.setItem("usuarioLogueado", username);
             alert('¡Login exitoso! Bienvenido, ' + username + '.');
             window.location.href = 'inicio2.html';
         } else {
