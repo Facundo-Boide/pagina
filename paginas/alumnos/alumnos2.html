@@ -23,12 +23,20 @@
 </body>
 
 <main>
-    <h1>listado de reservas</h1>
-    <ul id="listaReservas"></ul>
-
-
-    <script src="./lista.js"></script>
-
+    <div id="reservasContainer">
+        <table class="reservas-tabla">
+        <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Aula</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+            <tbody id="reservasBody">
+            </tbody>
+        </table>
+    </div>
+<script src="./lista.js"></script>
 </main>
 
 </html>

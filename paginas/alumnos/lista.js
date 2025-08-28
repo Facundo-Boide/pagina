@@ -1,13 +1,17 @@
-    // Recuperar reservas del localStorage
-    const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
-    const lista = document.getElementById("listaReservas");
+// Recuperar reservas del localStorage
+const reservas = JSON.parse(localStorage.getItem("reservas")) || [];
+const tbody = document.getElementById("reservasBody");
 
-    if (reservas.length === 0) {
-        lista.innerHTML = "<li>No hay reservas registradas.</li>";
-    } else {
-        reservas.forEach(r => {
-            const li = document.createElement("li");
-            li.textContent = `${r.usuario} reservó ${r.aula} el ${r.fecha}`;
-            lista.appendChild(li);
-        });
-    }
+if (reservas.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="3">No hay reservas registradas.</td></tr>`;
+} else {
+    reservas.forEach(r => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
+            <td>${r.usuario}</td>
+            <td>${r.aula}</td>
+            <td>${r.fecha}</td>
+        `;
+        tbody.appendChild(fila);
+    });
+}
