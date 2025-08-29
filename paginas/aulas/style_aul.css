@@ -44,6 +44,8 @@ main .aulas-container .aula .imagen-aula {
 main .aulas-container .aula .info-aula {
     flex-grow: 1;
     text-align: left;
+    margin-left: 30px;
+    margin-bottom: 40px;
 }
 
 main .aulas-container .aula h2 {
