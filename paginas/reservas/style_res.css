@@ -1,5 +1,5 @@
 .reservas {
-    width: 100% ;
+    width: 100%;
     max-width: 1280px;
     margin: 60px auto;
     padding: 0 20px;
@@ -11,19 +11,27 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 30px;
 }
 
 .bloque {
     padding: 0px;
     width: 100%;
     max-width: 300px;
-    max-height: 50px;
     text-align: center;
-    font-family:  "Montserrat", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-style: normal;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s;
+    color: #000;
+}
 
+.bloque:hover {
+    transform: scale(1.03);
 }
 
 .bloque-img {
