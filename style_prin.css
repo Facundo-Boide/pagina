@@ -155,14 +155,29 @@ p {
     margin-top: 5em;
 }
 
-.login-form button {
-    padding: 5px 10px;
-    background-color: #fffb00;
-    color: black border none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s;
+.btn-unraf-gradient {
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #009DDC 0%, #003366 100%);
+  /* De gradiente de celeste fuerte a azul oscuro */
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.3);
+  transition: filter 0.2s ease, transform 0.1s ease;
+}
+
+.btn-unraf-gradient:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btn-unraf-gradient:active {
+  filter: brightness(0.9);
+  transform: translateY(0);
 }
 
 .error-message {
@@ -176,8 +191,6 @@ p {
     text-align: center;
     display: none;
 }
-
-/* Oculto al inicio */
 
 .present {
     margin: 30px 0 60px;
@@ -247,7 +260,6 @@ h2 {
         margin-top: 30px;
         padding: 0;
         grid-template-columns: 1fr;
-        /* max-width: 400px; */
     }
 
     .blok-vida .vida {
