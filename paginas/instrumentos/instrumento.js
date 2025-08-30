@@ -1,27 +1,19 @@
-    // Buscar todos los botones de reservar
-    document.querySelectorAll(".btn-reservar").forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-            const usuario = localStorage.getItem("usuarioLogueado");
-            if (!usuario) {
-                alert("Debes iniciar sesión para reservar.");
-                return;
-            }
+document.querySelectorAll(".btn-reservar").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        const usuario = localStorage.getItem("usuario"); // usuario logueado
+        const instrumentos = ["Proyector portátil", "Notebook", "Otro instrumento"];
+        
+        const reserva = {
+            usuario: usuario || "Invitado",
+            instrumento: instrumentos[index],
+            fecha: new Date().toLocaleDateString()
+        };
 
-            // Buscar el nombre del aula correspondiente
-            const instrumento = btn.closest(".aula").querySelector("h2").textContent;
+        // Guardar en localStorage
+        const reservas = JSON.parse(localStorage.getItem("reservasInstrumentos")) || [];
+        reservas.push(reserva);
+        localStorage.setItem("reservasInstrumentos", JSON.stringify(reservas));
 
-            // Crear objeto reserva
-            const reserva = {
-                usuario: usuario,
-                aula: instrumento,
-                fecha: new Date().toLocaleString()
-            };
-
-            // Guardar en localStorage (como lista)
-            let reservas = JSON.parse(localStorage.getItem("reservas")) || [];
-            reservas.push(reserva);
-            localStorage.setItem("reservas", JSON.stringify(reservas));
-
-            alert("Reserva realizada en " + instrumento + " a nombre de " + usuario);
-        });
+        alert(`¡Reserva exitosa! Guardada para ${reserva.instrumento}`);
     });
+});
